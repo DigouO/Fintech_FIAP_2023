@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Catamaran', sans-serif;
+}
+
+:root {
+  --color-blue: rgb(20, 20, 100);
+  --margin-base: 20px;
+  --color-dark-blue: rgb(32, 4, 110);
+}
+
+.container {
+  min-height: 100vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* .box-40 {
+  width: 45%;
+}
+
+.box-60{
+  width: 55%;
+} */
+
+.box {
+  width: 50%;
+  min-height: 90%;
+  color: var(--color-blue);
+  margin-bottom: var(--margin-base);
+}
+
+.box h2 {
+  font-size: 6vmin;
+  margin: var(--margin-base) 0;
+}
+
+.box p {
+  width: 90%;
+  font-size: 3vmin;
+  margin: var(--margin-base) 0;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.box-form-item {    
+  padding: 0 10px;
+  height: 90px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; 
+  flex-wrap: wrap;
+}
+
+.box-form-item label {
+  font-size: 18px;  
+}
+
+input, select {    
+  width: 100%;
+  height: 40px;
+  padding-left: 40px;
+  font-size: 18px;
+}
+
+select {
+  padding-left: 10px;
+}
+
+.icon {
+  position: relative;
+  top: 28px;
+  left: 15px;
+}
+
+input:focus, select:focus {
+  outline-color: var(--color-dark-blue);
+}
+
+.box-form-radio {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid var(--color-dark-blue);
+}
+
+.radio {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+
+.box-form-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--margin-base);
+}
+
+.box-form-button button {
+  margin-top: var(--margin-base);
+  width: 200px;
+  height: 50px;
+  background-color: var(--color-blue);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  border: 0;
+}
+
+.box-form-button button:hover {
+  background-color: transparent;
+  color: var(--color-dark-blue);
+  cursor: pointer;
+  border: 1px solid var(--color-blue);
+}
+
+.arrow {
+  color: #6c98e5;
+  margin-left: 5px;
+}
+
+label:not(.radio label, .select) {
+  margin-bottom: -10px;
+}
+
+@media(max-width: 1080px) {
+  .container {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .box {
+    width: 90%;     
+  }
+
+  .box p {
+    width: 100%;
+  }  
+}
+
+@media(max-width: 880px) {    
+  .box-form-item {
+    width: 100%;
+  }
+}
